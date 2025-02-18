@@ -1,0 +1,37 @@
+.footerWrapper {
+    display: flex;
+    color: white; 
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: 12%;
+    
+    
+}
+.footerData ul{
+    list-style: none;
+   
+    
+}
+.footer_icon{
+    display: inline-flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-left:10% ;
+    margin-inline: 19%;
+    
+
+}
+.serviceCopy{
+    color: white;
+    margin-left:10% ;
+    margin-inline: 19%;
+}
+.serviceCode p {
+    border-radius: 2;
+    border-color: white;
+    padding: 3px;
+    border-style: double;
+    width: 12%;
+    text-align: center;
+}

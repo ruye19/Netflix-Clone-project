@@ -1,15 +1,22 @@
 import React from 'react'
 import './Footer.css'
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 
 
 export default function Footer() {
   return (
     <div>
-      <div>
-        <div className="footer_icon">
-        
-        </div>
-        <div className="footer_data">
+      <div className="footer_icon">
+        <FacebookOutlinedIcon />
+        <InstagramIcon />
+        <YouTubeIcon />
+      </div>
+      <div className='footerWrapper'>
+
+
+        <div className="footerData">
           <ul>
             <li>Audio description</li>
             <li>Investor relation</li>
@@ -38,7 +45,11 @@ export default function Footer() {
             <li>contact us</li>
           </ul>
         </div>
-        <div className="service_code">
+
+
+      </div>
+      <div className="serviceCopy">
+        <div className="serviceCode">
           <p>
             Service code
           </p>
@@ -46,8 +57,8 @@ export default function Footer() {
         <div className="copy-link">
           <p> © copy right 1997-2024 Netflix, inc</p>
         </div>
-
       </div>
+
     </div>
   )
 }

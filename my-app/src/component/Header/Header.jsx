@@ -1,9 +1,10 @@
 import React from "react";
 import netflixLogo from "../../assets/Netflix_Logo_RGB.png";
 import "./Header.css";
-import { Search, Bell, User } from "lucide-react";
-import { ChevronDown } from "lucide-react";
-
+import SearchIcon from '@mui/icons-material/Search';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function Header() {
   return (
@@ -25,10 +26,10 @@ export default function Header() {
 
       {/* Right Side Icons */}
       <div className="right-icons">
-        <Search size={24} className="cursor-pointer text-gray-600 hover:text-white" />
-        <Bell size={24} className="cursor-pointer text-gray-600 hover:text-white" />
-        <User size={24} className="cursor-pointer text-gray-600 hover:text-white" />
-        <ChevronDown size={24} className="cursor-pointer text-gray-600 hover:text-white" />
+      <SearchIcon />
+      <NotificationsIcon />
+      <AccountCircleIcon />
+      <ArrowDropDownIcon />
 
       </div>
     </div>

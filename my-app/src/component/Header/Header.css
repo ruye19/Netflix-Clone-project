@@ -1,38 +1,67 @@
 .headerAll {
     height: 10vh;
-    position: sticky;
+    position: fixed;
     display: flex;
     top: 0;
-    justify-content: space-between; 
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
-    transition-timing-function: ease-in;
-    /* background-color: black; */
-    background-color: transparent;
+    /* transition: background-color 0.5s ease-in-out; */
     color: rgb(250, 241, 241);
-    z-index: 1;
-    padding: 0 10px; 
+    z-index: 10;
+    padding: 0 10px;
+    background-color: transparent;
 }
 
+.headerScrolled {
+    background-color: black;
+}
 
+/* Netflix Logo */
 .headerOption img {
-    width: 123px; 
-    height: auto; 
+    width: 100px;
+    height: auto;
 }
 
+/* Navigation */
 .headerOption ul {
-    width: 140%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     cursor: pointer;
     margin-top: 14px;
+    gap: 15px;
 }
 
-
+/* Right-side icons */
 .right-icons {
     display: flex;
     align-items: center;
     gap: 20px;
     padding-right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .headerOption ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+    .headerOption img {
+        width: 80px;
+    }
+    .right-icons {
+        gap: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .headerOption ul {
+        display: none; /* Hide menu items on very small screens */
+    }
+    .headerOption img {
+        width: 70px;
+    }
 }

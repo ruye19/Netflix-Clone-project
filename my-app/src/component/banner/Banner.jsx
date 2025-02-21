@@ -34,7 +34,7 @@ const Banner = () => {
         backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        height: '70vh', 
+        height: '73vh', 
         width: '100%', 
         backgroundPosition   : window.innerWidth > 1024 ? 'top' : 'center',
 

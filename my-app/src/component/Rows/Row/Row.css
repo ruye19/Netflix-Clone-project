@@ -1,0 +1,24 @@
+img{
+    width: 40vb;
+    max-height: 230px;
+
+}
+.row-poster{
+    /* object-fit: contain; */
+    /* max-height: 100%; */
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    gap: 15px;
+    padding: 12px;
+
+}
+.row-poster::-webkit-scrollbar{
+    display: none;
+}
+.row-poster img:hover{
+    transform: scale(1.10);
+}
+.row-posterlarge {
+ max-height:200px ;
+}

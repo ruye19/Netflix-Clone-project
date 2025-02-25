@@ -1,3 +1,4 @@
+/* Header Container */
 .headerAll {
     height: 10vh;
     position: fixed;
@@ -10,24 +11,27 @@
     z-index: 10;
     padding: 0 10px;
     background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
 }
 
+/* Add black background when scrolled */
 .headerScrolled {
     background-color: black;
 }
 
-/* Netflix Logo */
+/* Left Section (Logo & Navigation) */
 .headerOption {
     display: flex;
     align-items: center;
 }
 
+/* Netflix Logo */
 .headerOption img {
     width: 100px;
     height: auto;
 }
 
-/* Navigation */
+/* Desktop Navigation Menu */
 .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -38,7 +42,18 @@
     gap: 15px;
 }
 
-/* Right-side icons */
+.nav-menu li {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu li:hover {
+    color: #e50914; /* Netflix Red */
+}
+
+/* Right-side Icons */
 .right-icons {
     display: flex;
     align-items: center;
@@ -46,7 +61,7 @@
     padding-right: 20px;
 }
 
-/* Responsive Design */
+/* 🔹 Responsive for Tablets */
 @media (max-width: 900px) {
     .nav-menu {
         gap: 10px;
@@ -61,9 +76,9 @@
     }
 }
 
-/* Mobile Styling */
+/* 🔹 Mobile Styling */
 @media (max-width: 600px) {
-    /* Hide menu items initially */
+    /* Hide default menu */
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -71,9 +86,10 @@
         top: 60px;
         left: 0;
         width: 100%;
-        background: black;
+        background: rgba(0, 0, 0, 0.9); /* Dark background */
         text-align: center;
         padding: 10px 0;
+        transition: all 0.3s ease-in-out;
     }
 
     /* Show menu when toggled */
@@ -81,21 +97,33 @@
         display: flex;
     }
 
-    /* Toggle button */
-    .menu-toggle {
-        background: none;
-        border: none;
+    /* Mobile Menu Items */
+    .nav-menu li {
         color: white;
-        font-size: 24px;
-        cursor: pointer;
-        display: block;
-        margin-left: 10px;
+        padding: 12px;
+        font-size: 18px;
+        width: 100%;
     }
 
-    /* Hide toggle button on larger screens */
-    @media (min-width: 601px) {
-        .menu-toggle {
-            display: none;
-        }
+    .nav-menu li:hover {
+        background: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    }
+
+    /* 🔹 Toggle Button (Only visible on mobile) */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;  /* Set icon color to white */
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+}
+
+/* 🔹 Hide Toggle Button on Larger Screens */
+@media (min-width: 601px) {
+    .menu-toggle {
+        display: none !important;
     }
 }

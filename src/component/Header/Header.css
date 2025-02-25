@@ -6,7 +6,6 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    /* transition: background-color 0.5s ease-in-out; */
     color: rgb(250, 241, 241);
     z-index: 10;
     padding: 0 10px;
@@ -18,19 +17,24 @@
 }
 
 /* Netflix Logo */
+.headerOption {
+    display: flex;
+    align-items: center;
+}
+
 .headerOption img {
     width: 100px;
     height: auto;
 }
 
 /* Navigation */
-.headerOption ul {
+.nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     cursor: pointer;
-    margin-top: 14px;
+    margin-left: 20px;
     gap: 15px;
 }
 
@@ -44,7 +48,7 @@
 
 /* Responsive Design */
 @media (max-width: 900px) {
-    .headerOption ul {
+    .nav-menu {
         gap: 10px;
         font-size: 14px;
     }
@@ -57,11 +61,41 @@
     }
 }
 
+/* Mobile Styling */
 @media (max-width: 600px) {
-    .headerOption ul {
-        display: none; /* Hide menu items on very small screens */
+    /* Hide menu items initially */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: black;
+        text-align: center;
+        padding: 10px 0;
     }
-    .headerOption img {
-        width: 70px;
+
+    /* Show menu when toggled */
+    .nav-menu.open {
+        display: flex;
+    }
+
+    /* Toggle button */
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        display: block;
+        margin-left: 10px;
+    }
+
+    /* Hide toggle button on larger screens */
+    @media (min-width: 601px) {
+        .menu-toggle {
+            display: none;
+        }
     }
 }

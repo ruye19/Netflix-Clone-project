@@ -34,7 +34,7 @@ const Row = ({ title, fetchUrl, isLarge }) => {
           setErrormessage('Sorry, we couldnt found the trailer try another one ')
           setTimeout(() => {
             setErrormessage('');
-          }, 3000);
+          }, 2000);
         })
     }
   }
@@ -65,7 +65,7 @@ const Row = ({ title, fetchUrl, isLarge }) => {
           />
         ))}
       </div>
-      {errormessage && <p style={{ color: 'red', textAlign: 'center', fontWeight: 'bold', fontSize: '20px' }}>{errormessage} 🫣</p>}
+      {errormessage && <p style={{ color: 'red', textAlign: 'center', fontWeight: 'bold', fontSize: '20px' }}>{errormessage} 🤔</p>}
       {trailer && (<YouTube videoId={trailer} opts={{ height: "390", width: "100%", margin: '24%', playerVars: { autoplay: 1 } }} />)}
     </div>
   );

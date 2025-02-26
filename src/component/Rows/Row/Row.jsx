@@ -40,16 +40,14 @@ const Row = ({ title, fetchUrl, isLarge }) => {
   }
 
   useEffect(() => {
-    const fetchData = async () => {
+   ( async () => {
       try {
         const request = await axios.get(fetchUrl);
         setmovies(request.data.results);
       } catch (error) {
         console.log("Error fetching movies:", error);
       }
-    };
-
-    fetchData();
+    })();
   }, [fetchUrl]);
   return (
     <div className='row-posters'>
